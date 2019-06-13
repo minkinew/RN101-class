@@ -4,7 +4,7 @@ import { Constants } from 'expo';
 
 export default class CityList extends React.Component {
   static navigationOptions = {
-    title: 'Cities',
+    title: '팀16',
   };
 
   constructor(props) {
@@ -16,7 +16,7 @@ export default class CityList extends React.Component {
   }
 
   componentDidMount() {
-    fetch('http://demo6468405.mockable.io/weather-crawlers/cities')
+    fetch(`http://192.168.107.1:8080/weather-crawler/available-cities`)
       .then(response => response.json())
       .then(cities => {
         console.log('cities =', cities.length);
@@ -57,20 +57,20 @@ export default class CityList extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#FF6F61',
     marginTop: Constants.statusBarHeight,
   },
 
   item: {
+    backgroundColor: '#FF6D70',
     flex: 1,
-    height: 50,
+    height: 100,
     justifyContent: 'center',
-
-    borderWidth: 1,
+    borderWidth: 2,
     borderColor: 'orange',
   },
   text: {
-    fontSize: 20,
-    textAlign: 'center',
+    fontSize: 40,
+    textAlign: 'left',
   }
 });
