@@ -23,3 +23,7 @@ $ npm install
 $ npm run start
 ```
 
+### additive
+- We've only changed the basic parts.
+- Change Title, Background Color, FontSize, Text Align, Height.
+- Get weather-crawler/available-cities API-Key.
